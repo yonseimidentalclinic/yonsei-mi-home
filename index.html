@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연세미치과 - 당신의 미소를 위한 최고의 선택</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="main-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center h-[80px]">
+            <a href="#" class="text-2xl font-bold text-blue-600">
+                <i class="fas fa-tooth mr-2"></i>연세미치과
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">홈</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">병원소개</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">진료안내</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">오시는길</a>
+                <a href="#appointment" class="btn btn-primary">온라인 예약</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-40 menu-closed md:hidden">
+        <div class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-6 menu-closed-panel">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#" class="text-xl font-bold text-blue-600">
+                    <i class="fas fa-tooth mr-2"></i>연세미치과
+                </a>
+                <button id="close-mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 mobile-menu-link">홈</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 mobile-menu-link">병원소개</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 mobile-menu-link">진료안내</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 mobile-menu-link">오시는길</a>
+                <a href="#appointment" class="btn btn-primary w-full mt-4 mobile-menu-link">온라인 예약</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <section id="home" class="hero-bg text-white min-h-[calc(100vh-80px)] flex items-center justify-center pt-[80px] -mt-[80px]">
+        <div class="bg-black bg-opacity-50 p-10 md:p-20 rounded-lg text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                연세미치과, <br class="md:hidden"> 당신의 건강한 미소를 디자인합니다.
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                최첨단 장비와 숙련된 의료진이 함께하는 연세미치과에서 편안하고 안전한 진료를 경험하세요.
+            </p>
+            <a href="#appointment" class="btn btn-primary text-lg px-8 py-3">
+                <i class="far fa-calendar-check mr-2"></i> 예약하기
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-blue-600">병원소개</h2>
+            <p class="section-subtitle">
+                연세미치과는 환자 중심의 진료 철학을 바탕으로 최상의 의료 서비스를 제공하기 위해 노력합니다.
+            </p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/d1fae5/10b981?text=친절한+상담+모습" alt="병원 내부 또는 상담 모습" class="rounded-lg shadow-xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/d1fae5/10b981?text=이미지+로딩+실패';">
+                </div>
+                <div class="text-gray-700 space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">환자를 먼저 생각하는 마음</h3>
+                    <p>저희 연세미치과는 과잉진료 없이 꼭 필요한 치료만을 권해드리며, 모든 치료 과정에서 환자분들과 충분히 소통하여 안심하고 진료받으실 수 있도록 최선을 다합니다.</p>
+                    <p>최신 디지털 장비를 도입하여 정확한 진단과 안전한 치료를 약속드리며, 철저한 위생 관리 시스템으로 감염 걱정 없는 깨끗한 진료 환경을 제공합니다.</p>
+                    <ul class="list-disc list-inside space-y-2 mt-4">
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>정직하고 투명한 진료</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>첨단 디지털 장비 보유</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>철저한 감염 관리 시스템</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i>편안하고 쾌적한 진료 환경</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-sky-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-blue-600">진료안내</h2>
+            <p class="section-subtitle">
+                연세미치과는 다양한 치과 질환에 대한 전문적이고 체계적인 치료 프로그램을 제공합니다.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-blue-500 text-5xl mb-6"><i class="fas fa-tooth"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">임플란트</h3>
+                    <p class="text-gray-600 text-sm">자연치아와 유사한 기능과 심미성을 회복시켜주는 첨단 임플란트 시술입니다.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-blue-500 text-5xl mb-6"><i class="fas fa-smile-beam"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">치아교정</h3>
+                    <p class="text-gray-600 text-sm">삐뚤어진 치아를 바로잡아 건강하고 아름다운 미소를 되찾아 드립니다.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-blue-500 text-5xl mb-6"><i class="fas fa-magic"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">심미치료</h3>
+                    <p class="text-gray-600 text-sm">치아미백, 라미네이트 등 아름다운 미소를 위한 다양한 심미치료를 제공합니다.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="text-blue-500 text-5xl mb-6"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">일반진료</h3>
+                    <p class="text-gray-600 text-sm">충치치료, 신경치료, 스케일링 등 기본적인 구강 건강 관리를 위한 진료입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-blue-600">왜 연세미치과인가?</h2>
+            <p class="section-subtitle">
+                환자분들의 만족을 최우선으로 생각하며, 최고의 의료 서비스를 제공하기 위해 끊임없이 노력합니다.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-blue-500 text-4xl mb-4"><i class="fas fa-user-md"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">숙련된 의료진</h3>
+                    <p class="text-gray-600">풍부한 임상경험과 노하우를 갖춘 의료진이 정확하고 안전한 진료를 제공합니다.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-500 text-4xl mb-4"><i class="fas fa-microscope"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">첨단 의료장비</h3>
+                    <p class="text-gray-600">3D CT, 디지털 스캐너 등 최신 장비를 통해 정밀 진단 및 치료 계획을 수립합니다.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-500 text-4xl mb-4"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">환자 중심 케어</h3>
+                    <p class="text-gray-600">편안한 진료 환경과 친절한 상담으로 환자분들의 만족도를 높입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment" class="py-16 md:py-24 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">온라인 예약</h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto">
+                간편하게 온라인으로 예약하고, 연세미치과의 전문적인 진료를 경험하세요.
+            </p>
+            <a href="tel:02-123-4567" class="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3 mr-4 mb-4 sm:mb-0">
+                <i class="fas fa-phone-alt mr-2"></i> 전화 예약 (02-123-4567)
+            </a>
+            <button id="show-appointment-form-button" class="btn bg-yellow-400 text-gray-800 hover:bg-yellow-500 text-lg px-8 py-3">
+                <i class="far fa-calendar-alt mr-2"></i> 온라인 간편 예약
+            </button>
+        </div>
+    </section>
+    
+    <div id="appointment-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-[60] flex items-center justify-center hidden p-4">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg transform transition-all scale-95 opacity-0" id="appointment-form-container">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-semibold text-gray-800">온라인 예약 신청</h3>
+                <button id="close-appointment-modal-button" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <form id="online-appointment-form" class="space-y-4">
+                <div>
+                    <label for="appointment-name" class="block text-sm font-medium text-gray-700">이름</label>
+                    <input type="text" name="appointment-name" id="appointment-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="appointment-phone" class="block text-sm font-medium text-gray-700">연락처</label>
+                    <input type="tel" name="appointment-phone" id="appointment-phone" required placeholder="010-1234-5678" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="appointment-date" class="block text-sm font-medium text-gray-700">예약 희망일</label>
+                    <input type="date" name="appointment-date" id="appointment-date" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="appointment-time" class="block text-sm font-medium text-gray-700">예약 희망 시간</label>
+                    <select name="appointment-time" id="appointment-time" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <option value="">시간 선택</option>
+                        <option value="10:00">오전 10:00</option>
+                        <option value="11:00">오전 11:00</option>
+                        <option value="14:00">오후 14:00</option>
+                        <option value="15:00">오후 15:00</option>
+                        <option value="16:00">오후 16:00</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="appointment-message" class="block text-sm font-medium text-gray-700">문의 및 요청사항 (선택)</label>
+                    <textarea name="appointment-message" id="appointment-message" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                </div>
+                 <div>
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="agreement" name="agreement" type="checkbox" required class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="agreement" class="font-medium text-gray-700">개인정보 수집 및 이용에 동의합니다.</label>
+                            <p class="text-gray-500 text-xs">수집 항목: 이름, 연락처. 목적: 예약 상담 및 안내. 보유 기간: 3년.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="w-full btn btn-primary py-3">예약 신청하기</button>
+                </div>
+            </form>
+            <p id="appointment-success-message" class="mt-4 text-green-600 text-center hidden">예약 신청이 완료되었습니다. 확인 후 연락드리겠습니다.</p>
+        </div>
+    </div>
+
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-blue-600">오시는길 및 문의</h2>
+            <p class="section-subtitle">
+                궁금한 점이 있으시면 언제든지 문의해주세요. 친절하게 안내해드리겠습니다.
+            </p>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">온라인 문의</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">이름</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">연락처</label>
+                            <input type="tel" name="phone" id="phone" required placeholder="010-1234-5678" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">이메일 (선택)</label>
+                            <input type="email" name="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">문의내용</label>
+                            <textarea name="message" id="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                        </div>
+                        <div>
+                             <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="contact-agreement" name="contact-agreement" type="checkbox" required class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="contact-agreement" class="font-medium text-gray-700">개인정보 수집 및 이용에 동의합니다.</label>
+                                     <p class="text-gray-500 text-xs">수집 항목: 이름, 연락처, 이메일. 목적: 문의 응대. 보유 기간: 3년.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full btn btn-primary py-3">문의하기</button>
+                        </div>
+                    </form>
+                     <p id="contact-success-message" class="mt-4 text-green-600 text-center hidden">문의가 성공적으로 접수되었습니다. 곧 답변드리겠습니다.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">병원 정보</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <p><i class="fas fa-map-marker-alt mr-3 text-blue-500"></i><strong>주소:</strong> 서울특별시 서대문구 신촌로 123, 연세미빌딩 3층</p>
+                        <p><i class="fas fa-phone-alt mr-3 text-blue-500"></i><strong>전화:</strong> 02-345-6789</p>
+                        <p><i class="fas fa-fax mr-3 text-blue-500"></i><strong>팩스:</strong> 02-345-6790</p>
+                        <p><i class="fas fa-envelope mr-3 text-blue-500"></i><strong>이메일:</strong> contact@yonseimichi.co.kr</p>
+                        <p><i class="far fa-clock mr-3 text-blue-500"></i><strong>진료시간:</strong></p>
+                        <ul class="list-disc list-inside ml-5">
+                            <li>평일: 오전 9:30 ~ 오후 6:30</li>
+                            <li>토요일: 오전 9:30 ~ 오후 2:00 (점심시간 없음)</li>
+                            <li>점심시간: 오후 1:00 ~ 오후 2:00</li>
+                            <li>일요일/공휴일: 휴진</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 rounded-lg shadow-lg overflow-hidden h-64 md:h-80">
+                        <div id="kakaomap" style="width:100%;height:100%;"></div>
+                        <img src="https://placehold.co/600x400/a5f3fc/0891b2?text=병원+위치+지도" alt="병원 위치 지도" class="w-full h-full object-cover hidden" onerror="this.onerror=null;this.style.display='block';" id="map-fallback-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="#" class="text-xl font-semibold text-white hover:text-blue-400 transition duration-300"><i class="fas fa-tooth mr-2"></i>연세미치과</a>
+            </div>
+            <p class="text-sm mb-2">
+                서울특별시 서대문구 신촌로 123, 연세미빌딩 3층 | 대표: 김미소 | 사업자등록번호: 123-45-67890
+            </p>
+            <p class="text-sm mb-6">
+                전화: 02-345-6789 | 이메일: contact@yonseimichi.co.kr
+            </p>
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" aria-label="Naver Blog" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M16.25.75A3.75 3.75 0 0012.5 4.5v15a3.75 3.75 0 003.75-3.75V.75zM4.5 4.5a3.75 3.75 0 000 7.5h3.75V4.5H4.5zM4.5 15.75A3.75 3.75 0 008.25 12h3.75v7.5H8.25a3.75 3.75 0 01-3.75-3.75z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-xs">&copy; <span id="currentYear"></span> 연세미치과. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_APP_KEY&libraries=services"></script>
+    <script src="script.js"></script>
+</body>
+</html>
