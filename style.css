@@ -1,78 +1,101 @@
 /* 기본 폰트 설정 (Inter & Noto Sans KR) */
 body {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif; /* Noto Sans KR 추가 */
-    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
     padding-top: 80px; /* 헤더 높이만큼 여백 추가 */
+    background-color: #FFFBFB; /* 매우 연한 핑크빛 배경 */
+    color: #5B5B5B; /* 기본 텍스트 색상 - 어두운 회색 */
 }
 
 /* 사용자 정의 스타일 */
 .hero-bg {
-    background-image: url('https://placehold.co/1920x1080/e0f2fe/3b82f6?text=Yonsei+Michi+Dental+Clinic+Hero'); /* 히어로 배경 이미지 예시 */
+    /* 실제 운영 시에는 고품질의 관련 이미지로 교체해주세요. */
+    background-image: url('https://placehold.co/1920x1080/F8C8DC/A36A7F?text=연세미치과+당신의+미소를+위해'); /* 분홍색 톤의 히어로 배경 이미지 예시 */
     background-size: cover;
     background-position: center;
-    /* 이미지 로딩 실패 시 대체 스타일 */
-    background-color: #e0f2fe; /* 연한 하늘색 배경 */
+    background-color: #F8C8DC; /* 이미지 로딩 실패 시 대체 배경색 */
 }
 
 .section-title {
     font-size: 2.25rem; /* 36px */
     font-weight: 700;
-    margin-bottom: 1.5rem; /* 24px */
+    margin-bottom: 1rem; /* 16px */
     text-align: center;
+    color: #C57C8C; /* 포인트가 되는 부드러운 로즈 핑크 */
 }
 
 .section-subtitle {
     font-size: 1.125rem; /* 18px */
-    color: #4b5563; /* gray-600 */
+    color: #7A7A7A; /* 부드러운 회색 */
     margin-bottom: 3rem; /* 48px */
     text-align: center;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .service-card {
+    background-color: white;
+    border-radius: 0.75rem; /* 12px, 좀 더 부드러운 곡선 */
+    box-shadow: 0 8px 16px rgba(217, 170, 183, 0.1); /* 부드러운 핑크빛 그림자 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(217, 170, 183, 0.15);
 }
 
+/* 서비스 카드 내 아이콘 및 텍스트 색상 */
+.service-card .text-blue-500 { /* 기존 Tailwind 클래스 오버라이드 */
+    color: #E79BAD !important; /* 메인 핑크 */
+}
+.service-card h3 {
+    color: #4A3F42; /* 제목 - 어두운 웜 그레이 */
+}
+
+/* 버튼 공통 스타일 */
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem; /* 12px 24px */
-    border-radius: 0.375rem; /* 6px */
+    padding: 0.875rem 1.75rem; /* 14px 28px, 약간 더 크게 */
+    border-radius: 0.5rem; /* 8px, 부드러운 곡선 */
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* transform 추가 */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.5px; /* 자간 약간 추가 */
 }
 .btn:active {
-    transform: scale(0.98); /* 클릭 시 약간 작아지는 효과 */
+    transform: scale(0.97);
 }
 
-
+/* 주 버튼 스타일 (분홍색) */
 .btn-primary {
-    background-color: #3b82f6; /* blue-500 */
+    background-color: #E79BAD; /* 메인 핑크 */
     color: white;
+    border: 1px solid transparent;
 }
 
 .btn-primary:hover {
-    background-color: #2563eb; /* blue-600 */
+    background-color: #D18A9B; /* 살짝 어두운 핑크 */
+    box-shadow: 0 4px 12px rgba(209, 138, 155, 0.3);
 }
 
-.btn-secondary {
-    background-color: #e5e7eb; /* gray-200 */
-    color: #1f2937; /* gray-800 */
+/* 보조 버튼 스타일 (예: 전화 예약 버튼 등) */
+.btn-secondary { /* 이 클래스를 HTML에서 직접 사용하거나, 특정 버튼에 이 스타일을 적용 */
+    background-color: #FEF6F7; /* 매우 연한 핑크 */
+    color: #C57C8C; /* 로즈 핑크 텍스트 */
+    border: 1px solid #E0C2C8; /* 연한 핑크 테두리 */
 }
 
 .btn-secondary:hover {
-    background-color: #d1d5db; /* gray-300 */
+    background-color: #FCEFF2;
+    border-color: #D18A9B;
+    color: #D18A9B;
 }
 
 /* 모바일 메뉴 스타일 */
-#mobile-menu { /* 전체 배경 오버레이 */
+#mobile-menu { 
     transition: opacity 0.3s ease-in-out;
 }
 #mobile-menu.menu-open {
@@ -84,8 +107,9 @@ body {
     pointer-events: none;
 }
 
-#mobile-menu > div { /* 실제 메뉴 패널 */
+#mobile-menu > div { 
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* 모바일 메뉴 패널에 그림자 추가 */
 }
 
 #mobile-menu > div.menu-open-panel {
@@ -103,18 +127,20 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 50; /* 모바일 메뉴보다 아래, 예약 모달보다 아래 */
-    background-color: rgba(255, 255, 255, 0.9); /* 약간 투명한 흰색 배경 */
-    backdrop-filter: blur(8px); /* 배경 블러 효과 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 좀 더 부드러운 그림자 */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    z-index: 50;
+    background-color: rgba(253, 240, 243, 0.85); /* 연한 핑크 배경, 투명도 약간 조정 */
+    backdrop-filter: blur(10px); /* 블러 효과 강화 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.05); /* 더 부드럽고 넓은 그림자 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* 스크롤 시 헤더 스타일 변경 (선택 사항) */
-/* header.scrolled {
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-} */
+/* 헤더 로고 색상 */
+header a.text-blue-600 { /* 기존 Tailwind 클래스 오버라이드 */
+    color: #E79BAD !important; /* 메인 핑크 */
+}
+/* 헤더 네비게이션 링크 호버 색상 */
+header nav a.text-gray-700:hover {
+    color: #E79BAD !important; /* 메인 핑크 */
+}
 
 
 /* 예약 모달 애니메이션 */
@@ -130,11 +156,99 @@ input[type="email"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #3b82f6; /* blue-500 */
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Tailwind focus ring 스타일 유사하게 */
+  border-color: #E79BAD; /* 메인 핑크 */
+  box-shadow: 0 0 0 3px rgba(231, 155, 173, 0.25); /* 핑크빛 포커스 링 */
 }
 
-/* 최소 날짜 설정을 위한 스타일 (선택 사항) */
 input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
+    opacity: 0.7;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* 섹션별 배경색 조정 */
+#about { /* 병원소개 */
+    background-color: white; /* 흰색 배경으로 깔끔함 유지 */
+}
+/* 병원소개 내 체크 아이콘 색상 */
+#about .fa-check-circle {
+    color: #E79BAD; /* 메인 핑크 */
+}
+
+#services { /* 진료안내 */
+    background-color: #FEF6F7; /* 매우 연한 핑크 배경 */
+}
+
+#why-choose-us { /* 왜 연세미치과인가? */
+    background-color: white; /* 흰색 배경 */
+}
+/* 왜 연세미치과인가? 섹션 내 아이콘 색상 */
+#why-choose-us .text-blue-500 { /* 기존 Tailwind 클래스 오버라이드 */
+    color: #E79BAD !important; /* 메인 핑크 */
+}
+
+
+#appointment { /* 온라인 예약 섹션 */
+    background-color: #E79BAD; /* 메인 핑크 배경 */
+}
+/* 온라인 예약 섹션 내 버튼 스타일 조정 */
+#appointment a.btn.bg-white { /* 전화 예약 버튼 */
+    background-color: white !important;
+    color: #C57C8C !important; /* 로즈 핑크 텍스트 */
+    border: 1px solid transparent;
+}
+#appointment a.btn.bg-white:hover {
+    background-color: #FEF6F7 !important; /* 매우 연한 핑크 배경 호버 */
+    color: #E79BAD !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#appointment button.btn.bg-yellow-400 { /* 온라인 간편 예약 버튼 */
+    background-color: #FDF0F3 !important; /* 매우 연한 핑크 */
+    color: #C57C8C !important; /* 로즈 핑크 텍스트 */
+    border: 1px solid #E0C2C8;
+}
+#appointment button.btn.bg-yellow-400:hover {
+    background-color: white !important;
+    color: #E79BAD !important;
+    border-color: #E79BAD;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+#contact { /* 오시는길 및 문의 */
+    background-color: #FEF6F7; /* 매우 연한 핑크 배경 */
+}
+/* 문의 섹션 내 아이콘 색상 */
+#contact .text-blue-500 { /* 기존 Tailwind 클래스 오버라이드 */
+    color: #E79BAD !important; /* 메인 핑크 */
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #4A3F42; /* 어두운 웜 그레이 (고급스러운 느낌) */
+    color: #E0C2C8; /* 연한 핑크빛 회색 텍스트 */
+}
+footer a.text-white:hover { /* 푸터 로고/링크 호버 */
+    color: #FDF0F3 !important; /* 매우 연한 핑크 */
+}
+footer .fab, footer .fas { /* 소셜 아이콘 */
+    transition: color 0.3s ease;
+}
+footer a:hover .fab, footer a:hover .fas { /* 소셜 아이콘 호버 */
+    color: #E79BAD !important; /* 메인 핑크 */
+}
+/* 네이버 블로그 SVG 아이콘 색상 */
+footer a[aria-label="Naver Blog"] svg {
+    fill: currentColor; /* 현재 텍스트 색상(회색계열)을 따름 */
+    transition: fill 0.3s ease;
+}
+footer a[aria-label="Naver Blog"]:hover svg {
+    fill: #E79BAD !important; /* 메인 핑크 */
+}
+
+/* 지도 이미지 대체 스타일 */
+#map-fallback-image {
+    border: 1px solid #E0C2C8; /* 연한 핑크 테두리 */
 }
